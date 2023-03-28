@@ -12,7 +12,9 @@ const Cart = () => {
     );
 };
 
-const StyledCart = styled.div`
+const StyledCart = styled.button`
+    all: unset;
+    cursor: pointer;
     svg {
         font-size: 1.6rem;
     }
