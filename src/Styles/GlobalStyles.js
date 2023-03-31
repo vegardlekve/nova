@@ -20,6 +20,10 @@ body {
     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif, 'Montserrat';
 }
 
+main {
+    min-height: 100vh;
+}
+
 h3 {
     font-family: 'Montserrat';
 }
