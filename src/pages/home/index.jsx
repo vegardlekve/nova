@@ -1,4 +1,6 @@
 import React from "react";
+//Components
+import Card from "../../components/card";
 //Hooks
 import DataSetup from "../../hooks/DataSetup";
 //Styles
@@ -16,12 +18,40 @@ export default function Home() {
         return <div>Error</div>;
     }
 
-    console.log(data);
+    const products = data;
+
     return (
         <main>
             <div>
-                <h1>Home</h1>
+                <Banner>
+                    <img src={require("../../assets/home.png")} alt="banner" />
+                </Banner>
+                <Gallery>
+                    {products.map((product) => (
+                        <Card key={product.id} product={product} />
+                    ))}
+                </Gallery>
             </div>
         </main>
     );
 }
+
+const Gallery = styled.div`
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr));
+    grid-column-gap: 2rem;
+    grid-row-gap: 4rem;
+    margin: 0rem 10%;
+`;
+
+const Banner = styled.div`
+    display: flex;
+    justify-content: center;
+    background-color: #ace8e4;
+    margin: 1rem 0rem 3rem 0rem;
+
+    img {
+        width: 100%;
+        margin: 0rem 10%;
+    }
+`;

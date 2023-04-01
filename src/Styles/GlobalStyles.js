@@ -10,11 +10,9 @@ const GlobalStyle = createGlobalStyle`
 
 html,
 body {
-    margin: 0rem 10%;
     min-height: 100vh;
     display: flex;
     flex-direction: column;
-    //background: #f1f1f1;
     --primary: #2d2d2d;
     --secondary: #535353;
     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif, 'Montserrat';
@@ -22,17 +20,36 @@ body {
 
 main {
     min-height: 100vh;
+    background: #f1f1f1;
+}
+
+h2 {
+    font-size: 1.2rem;
+    color: var(--primary);
+    padding: 1.5rem;
 }
 
 h3 {
     font-family: 'Montserrat';
+    font-size: 1rem;
+    color: var(--secondary);
+    padding: 1rem;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+p {
+    line-height: 150%;
 }
 
 button{
+    all: unset;
     font-weight: bold;
     font-size: 1.1rem;
     cursor: pointer;
-    padding: 1rem 2rem;
 }
 `;
 

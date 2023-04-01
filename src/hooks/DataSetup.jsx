@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 
 export default function DataSetup(url) {
-    const [data, setData] = useState(null);
+    const [data, setData] = useState([]);
     const [isLoading, SetIsLoading] = useState(false);
     const [isError, SetIsError] = useState(false);
 
