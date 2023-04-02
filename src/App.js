@@ -8,6 +8,7 @@ import Home from "./pages/home";
 import Contact from "./pages/contact";
 import Product from "./pages/product";
 import Checkout from "./pages/checkout";
+import Success from "./pages/success";
 //Hooks
 import { StateContext } from "./hooks/Context";
 //Styles
@@ -24,6 +25,7 @@ function App() {
                         <Route path="contact" element={<Contact />} />
                         <Route path="product/:id" element={<Product />} />
                         <Route path="checkout" element={<Checkout />} />
+                        <Route path="success" element={<Success />} />
                     </Route>
                 </Routes>
             </StateContext>

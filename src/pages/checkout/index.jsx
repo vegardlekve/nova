@@ -1,4 +1,6 @@
 import React from "react";
+//Route
+import { Link } from "react-router-dom";
 //Hooks
 import { useStateContext } from "../../hooks/Context";
 //Styles
@@ -8,7 +10,8 @@ import { FaShoppingCart } from "react-icons/fa";
 import { AiFillPlusCircle, AiFillMinusCircle } from "react-icons/ai";
 
 export default function Checkout() {
-    const { cartItems, onAdd, onRemove, totalPrice } = useStateContext();
+    const { cartItems, onAdd, onRemove, totalPrice, clearCart } =
+        useStateContext();
 
     return (
         <main>
@@ -49,7 +52,11 @@ export default function Checkout() {
                     {cartItems.length >= 1 && (
                         <CheckoutBtn>
                             <h3>Subtotal: {totalPrice.toFixed(2)}kr</h3>
-                            <button>Purchase</button>
+                            <Link to={"/success"}>
+                                <button onClick={{ clearCart }}>
+                                    Purchase
+                                </button>
+                            </Link>
                         </CheckoutBtn>
                     )}
                 </CartStyle>
