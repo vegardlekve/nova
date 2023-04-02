@@ -15,7 +15,7 @@ export default function Home() {
     }
 
     if (error) {
-        return <div>Error</div>;
+        return <div>Oh no.. {error.message}</div>;
     }
 
     const products = data;
@@ -38,7 +38,7 @@ export default function Home() {
 
 const Gallery = styled.div`
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(17rem, 1fr));
     grid-column-gap: 2rem;
     grid-row-gap: 4rem;
     margin: 0rem 10%;

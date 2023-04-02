@@ -28,8 +28,8 @@ const StyledHeader = styled.header`
     margin: 0rem 10%;
 
     img {
-        width: 60px;
-        height: 60px;
+        width: 40px;
+        height: 40px;
     }
 `;
 

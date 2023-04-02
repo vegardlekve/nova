@@ -26,14 +26,12 @@ main {
 h2 {
     font-size: 1.2rem;
     color: var(--primary);
-    padding: 1.5rem;
 }
 
 h3 {
     font-family: 'Montserrat';
     font-size: 1rem;
     color: var(--secondary);
-    padding: 1rem;
 }
 
 a {
@@ -41,13 +39,8 @@ a {
     text-decoration: none;
 }
 
-p {
-    line-height: 150%;
-}
-
 button{
     all: unset;
-    font-weight: bold;
     font-size: 1.1rem;
     cursor: pointer;
 }
