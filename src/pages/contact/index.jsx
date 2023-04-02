@@ -16,7 +16,7 @@ export default function Contact() {
 
     return (
         <main>
-            <ContactWrapper className="contact-banner">
+            <ContactWrapper>
                 <h1>Contact Us</h1>
                 <StyledForm onSubmit={onSubmit}>
                     <StyledLabel htmlFor="fullName">
