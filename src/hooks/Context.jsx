@@ -5,6 +5,8 @@ const ShopContext = createContext();
 export const StateContext = ({ children }) => {
     const [cartItems, setCartItems] = useState([]);
     const [qty, setQty] = useState(1);
+    const [totalQty, setTotalQty] = useState(0);
+    const [totalPrice, setTotalPrice] = useState(0);
 
     const increaseQty = () => {
         setQty((prevQty) => prevQty + 1);
@@ -18,6 +20,13 @@ export const StateContext = ({ children }) => {
     };
 
     const onAdd = (product, quantity) => {
+        //Total price
+        setTotalPrice(
+            (prevTotal) => prevTotal + product.discountedPrice * quantity
+        );
+        //Increase total qunatity
+        setTotalQty((prevTotal) => prevTotal + quantity);
+
         const exist = cartItems.find((item) => item.id === product.id);
         if (exist) {
             setCartItems(
@@ -32,9 +41,38 @@ export const StateContext = ({ children }) => {
         }
     };
 
+    const onRemove = (product) => {
+        //Total price
+        setTotalPrice((prevTotal) => prevTotal - product.discountedPrice);
+        //Decrease total qunatity
+        setTotalQty((prevTotal) => prevTotal - 1);
+
+        const exist = cartItems.find((item) => item.id === product.id);
+        if (exist.quantity === 1) {
+            setCartItems(cartItems.filter((item) => item.id !== product.id));
+        } else {
+            setCartItems(
+                cartItems.map((item) =>
+                    item.id === product.id
+                        ? { ...exist, quantity: exist.quantity - 1 }
+                        : item
+                )
+            );
+        }
+    };
+
     return (
         <ShopContext.Provider
-            value={{ qty, increaseQty, decreaseQty, cartItems, onAdd }}
+            value={{
+                qty,
+                increaseQty,
+                decreaseQty,
+                cartItems,
+                onAdd,
+                onRemove,
+                totalQty,
+                totalPrice,
+            }}
         >
             {children}
         </ShopContext.Provider>

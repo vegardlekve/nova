@@ -73,6 +73,7 @@ const DetailStyle = styled.div`
     img {
         width: 50%;
         max-height: 80vh;
+        object-fit: cover;
     }
 `;
 
