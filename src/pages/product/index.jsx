@@ -58,6 +58,25 @@ export default function Product() {
                         </button>
                     </Quantity>
                     <Buy onClick={() => onAdd(data, qty)}>Add to cart</Buy>
+                    <ReviewWrap>
+                        <h3>Reviews:</h3>
+                        {reviews && reviews.length > 0 ? (
+                            <div>
+                                <div>
+                                    {reviews.map((review) => {
+                                        return (
+                                            <StyledReviews key={review.id}>
+                                                <h4>{review.username}</h4>
+                                                <p>{review.description}</p>
+                                            </StyledReviews>
+                                        );
+                                    })}
+                                </div>
+                            </div>
+                        ) : (
+                            <p>No reviews</p>
+                        )}
+                    </ReviewWrap>
                 </ProductInfo>
             </DetailStyle>
         </main>
@@ -139,4 +158,17 @@ const Buy = styled.button`
     background: var(--primary);
     color: white;
     font-weight: 500;
+`;
+
+const ReviewWrap = styled.div`
+    text-align: center;
+    margin-top: 2rem;
+`;
+
+const StyledReviews = styled.div`
+    margin-top: 2rem;
+    background-color: white;
+    gap: 1rem;
+    border-radius: 1rem;
+    padding: 1rem;
 `;

@@ -61,6 +61,10 @@ export const StateContext = ({ children }) => {
         }
     };
 
+    const clearCart = (cartItems) => {
+        setCartItems = [];
+    };
+
     return (
         <ShopContext.Provider
             value={{
@@ -72,6 +76,7 @@ export const StateContext = ({ children }) => {
                 onRemove,
                 totalQty,
                 totalPrice,
+                clearCart,
             }}
         >
             {children}
