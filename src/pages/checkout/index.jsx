@@ -52,7 +52,7 @@ export default function Checkout() {
                     {cartItems.length >= 1 && (
                         <CheckoutBtn>
                             <h3>Subtotal: {totalPrice.toFixed(2)}kr</h3>
-                            <Link to={"/success"}>
+                            <Link to="/success">
                                 <button onClick={{ clearCart }}>
                                     Purchase
                                 </button>
