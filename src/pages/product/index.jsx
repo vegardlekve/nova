@@ -62,16 +62,14 @@ export default function Product() {
                         <h3>Reviews:</h3>
                         {reviews && reviews.length > 0 ? (
                             <div>
-                                <div>
-                                    {reviews.map((review) => {
-                                        return (
-                                            <StyledReviews key={review.id}>
-                                                <h4>{review.username}</h4>
-                                                <p>{review.description}</p>
-                                            </StyledReviews>
-                                        );
-                                    })}
-                                </div>
+                                {reviews.map((review) => {
+                                    return (
+                                        <StyledReviews key={review.id}>
+                                            <h4>{review.username}</h4>
+                                            <p>{review.description}</p>
+                                        </StyledReviews>
+                                    );
+                                })}
                             </div>
                         ) : (
                             <p>No reviews</p>

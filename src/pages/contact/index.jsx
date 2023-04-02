@@ -106,8 +106,6 @@ const StyledForm = styled.form`
     textarea {
         height: 20vh;
         border: none;
-        transition: 0.2s;
-        border: 1px solid $border-color;
         padding: 0.5rem;
         border-radius: 5px;
         resize: none;
@@ -130,8 +128,7 @@ const StyledLabel = styled.label`
 const StyledInput = styled.input`
     flex: 1;
     border: none;
-    transition: 0.2s;
-    border: 1px solid $border-color;
+    border: 1px solid;
     padding: 0.5rem;
     border-radius: 5px;
 

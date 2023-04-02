@@ -61,8 +61,8 @@ export const StateContext = ({ children }) => {
         }
     };
 
-    const clearCart = (cartItems) => {
-        setCartItems = [];
+    const clearCart = () => {
+        cartItems = [];
     };
 
     return (
