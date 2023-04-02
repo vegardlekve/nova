@@ -60,7 +60,8 @@ export const StateContext = ({ children }) => {
             );
         }
     };
-
+     const clearCart = () => {
+        setCartItems();
     };
 
     return (
