@@ -4,10 +4,17 @@ import styled from "styled-components";
 
 const Footer = () => {
     return (
-        <footer>
-            <h3>Footer</h3>
-        </footer>
+        <StyledFooter>
+            <h3>Nova Avenue</h3>
+        </StyledFooter>
     );
 };
 
 export default Footer;
+
+const StyledFooter = styled.footer`
+    height: 10vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+`;
