@@ -92,6 +92,14 @@ const DetailStyle = styled.div`
         max-height: 80vh;
         object-fit: cover;
     }
+
+    @media screen and (max-width: 768px) {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 1rem;
+        text-align: center;
+    }
 `;
 
 const ProductInfo = styled.div`
@@ -105,6 +113,10 @@ const ProductInfo = styled.div`
         height: 2.8rem;
         cursor: pointer;
         text-align: center;
+    }
+
+    @media screen and (max-width: 768px) {
+        width: 80%;
     }
 `;
 

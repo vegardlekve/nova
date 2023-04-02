@@ -82,6 +82,14 @@ const CartStyle = styled.div`
     padding: 2rem 5rem;
     overflow-y: scroll;
     position: relative;
+
+    @media screen and (max-width: 1024px) {
+        width: 80%;
+    }
+
+    @media screen and (max-width: 768px) {
+        width: 100%;
+    }
 `;
 
 const CheckoutCard = styled.div`
@@ -97,6 +105,13 @@ const CheckoutCard = styled.div`
         width: 6rem;
         max-height: 6rem;
         object-fit: cover;
+    }
+
+    @media screen and (max-width: 600px) {
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        gap: 1rem;
     }
 `;
 
@@ -153,6 +168,11 @@ const CheckoutQty = styled.div`
 
     svg {
         color: #494949;
+    }
+
+    @media screen and (max-width: 600px) {
+        justify-content: center;
+        align-items: center;
     }
 `;
 
